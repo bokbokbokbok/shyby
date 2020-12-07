@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="container-fluid">
+    <div class="row justify-content-between">
+      <div class="col m-3 p-3 bg-dark">
+        <div class="row">
+          <div class="col btn-group-vertical" role="group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">2</button>
+          </div>
+          <div class="col">
+            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success submit-button w-100" [disabled]="!form.valid">Login</button>
+      </div>
+      <div class="col m-3 bg-warning">
+
+      </div>
+    </div>
+  </div>
+
+</form>
