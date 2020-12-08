@@ -1,22 +1,46 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <div class="container-fluid">
-    <div class="row justify-content-between">
-      <div class="col m-3 p-3 bg-dark">
-        <div class="row">
-          <div class="col btn-group-vertical" role="group">
-            <button type="button" class="btn btn-secondary">1</button>
-            <button type="button" class="btn btn-secondary">2</button>
-            <button type="button" class="btn btn-secondary">2</button>
+  <div class="loginForm form-inline">
+    <div class="loginBar bg-dark">
+      <div class="row h-75">
+        <div class="col-4 d-flex flex-column">
+          <div class="col">
+            <button type="button" class="defaultBtn colorBrown w-100 h-100">1</button>
           </div>
           <div class="col">
-            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+            <button type="button" class="defaultBtn colorBrown w-100 h-100">1</button>
+          </div>
+          <div class="col">
+            <button type="button" class="defaultBtn colorBrown w-100 h-100">1</button>
           </div>
         </div>
-        <button type="submit" class="btn btn-success submit-button w-100" [disabled]="!form.valid">Login</button>
+        <div class="col d-flex flex-column">
+          <div class="row flex-fill">
+            <button type="button" class="btn btn-light w-100">1</button>
+          </div>
+          <div class="row flex-fill">
+            <div class="col">
+              <button type="button" class="defaultBtn colorPurple w-100 h-100">1</button>
+            </div>
+            <div class="col">
+              <button type="button" class="defaultBtn colorPurple w-100 h-100">1</button>
+            </div>
+            <div class="col">
+              <button type="button" class="defaultBtn colorPurple w-100 h-100">1</button>
+            </div>
+          </div>
+          <div class="row flex-fill">
+            <button type="button" class="btn btn-light w-100">1</button>
+          </div>
+        </div>
       </div>
-      <div class="col m-3 bg-warning">
+      <div class="row h-25">
+        <div class="col">
+          <button type="submit" class="defaultBtn colorBlue loginButton" [disabled]="!form.valid">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="dropdownNumbers bg-warning">
 
-      </div>
     </div>
   </div>
 
