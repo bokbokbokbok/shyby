@@ -12,6 +12,8 @@ export class AppComponent {
   model: any = {};
   options: FormlyFormOptions = {};
   users =["Tom", "Bob", "Sam", "Bill"];
+  dropdownUsers = false;
+  dropdownNumbers = false;
   
   fields: FormlyFieldConfig[] = [
     {
@@ -55,6 +57,37 @@ export class AppComponent {
     },
   ];
 
+  toggledropdownNumbers() {
+    this.dropdownUsers = false;
+    this.dropdownNumbers = !this.dropdownNumbers;
+  }
+
+  toggledropdownUsers() {
+    this.dropdownNumbers = false;
+    this.dropdownUsers = !this.dropdownUsers;
+  }
+
+  calculator = {
+    displayValue: 'Wybierz stolik',
+    waitingForSecondOperand: false,
+  };
+
+  inputDigit(digit) {
+    const { displayValue, waitingForSecondOperand } = this.calculator;
+  
+    if (waitingForSecondOperand === true) {
+      this.calculator.displayValue = digit;
+      this.calculator.waitingForSecondOperand = false;
+    } else {
+      this.calculator.displayValue = displayValue === 'Wybierz stolik' ||  displayValue === '0' ? '' + digit : '' + displayValue + digit;
+    }
+  }
+
+  resetCalculator() {
+    this.calculator.displayValue = 'Wybierz stolik';
+    this.calculator.waitingForSecondOperand = false;
+  }
+  
   submit() {
     alert(JSON.stringify(this.model));
   }
