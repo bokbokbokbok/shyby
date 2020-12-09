@@ -11,7 +11,8 @@ export class AppComponent {
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
-
+  users =["Tom", "Bob", "Sam", "Bill"];
+  
   fields: FormlyFieldConfig[] = [
     {
       type: 'button',

@@ -16,6 +16,20 @@
 .dropdownNumbers {
     width:43%;
     height:100%;
+    background-color: #454954;
+    padding: 5%;
+}
+.dropdownNumbers * {
+    padding: 10px;
+    font-size: 200%;
+    color:white;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: inherit;
+    border: none;
+}
+.dropdownNumbers *:active{
+    color:cadetblue;
 }
 .barContainer {
     position: relative;

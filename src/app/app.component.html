@@ -39,8 +39,10 @@
         </div>
       </div>
     </div>
-    <div class="dropdownNumbers bg-warning">
-
+    <div class="dropdownNumbers">
+      <div *ngFor="let user of users">
+        <a type="button">{{user}}</a>
+        </div>
     </div>
   </div>
 
