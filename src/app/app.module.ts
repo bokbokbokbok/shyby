@@ -6,18 +6,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
+import {Routes, RouterModule} from '@angular/router'; 
+
 import { LoginButton } from './login-button';
 import { BtnGroup } from './btn-group';
 import { NameSidebar } from './name-sidebar';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent, LoginButton, BtnGroup
+    AppComponent, LoginButton, BtnGroup, MainpageComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot({
+    FormlyModule.forRoot(
+      {
       types: [
         {
           name: 'button',
@@ -43,7 +49,8 @@ import { NameSidebar } from './name-sidebar';
         },
       ],
     }),
-    FormlyBootstrapModule
+    FormlyBootstrapModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })

@@ -35,7 +35,7 @@
       </div>
       <div class="row h-25">
         <div class="col">
-          <button type="submit" class="defaultBtn colorBlue loginButton" [disabled]="!form.valid">Zaloguj</button>
+          <button type="submit"  routerLink="/main" class="defaultBtn colorBlue loginButton" [disabled]="!form.valid">Zaloguj</button>
         </div>
       </div>
     </div>
@@ -66,5 +66,5 @@
         </div>
     </div>
   </div>
-
+  <router-outlet></router-outlet>
 </form>
