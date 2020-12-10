@@ -1,6 +1,85 @@
-<p>mainpage works!</p>
+<div class="mainpageForm container-fluid bg-dark-2 d-flex flex-column">
+    <div class="row">
+        <div class="col-2 border-light border-right darkBlue">
+            <div class="form-group h-100">
+                <h4 class="text-center" for="usr">Zlecenie</h4>
+                <input  type="text" class="form-control" id="usr">
+            </div>
+        </div>
+        <div class="col-1 border-light border-right darkBlue">
+            <h4 class="text-center">Stolik</h4>
+            <p class="text-center">123</p>
+        </div>
+        <div class="col-3 d-flex flex-column darkBlue">
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="text-center">Pracownik</h4>
+                </div>
+                <div class="col-6">
+                    <button type="logout" routerLink="/" class="btn btn-primary text-dark">Wyloguj</button>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-end flex-fill">
+                <p>Bob</p>
+            </div>
+        </div>
+        <div class="col-1 flex-fill p-2">
+            <button type="button" class="btn trybButton">
+                <p>Tryb</p>
+                <h3>PR</h3>
+            </button>
+        </div>
+        <div class="col-5 d-flex flex-column p-3 darkBlue">
+            <div class="row flex-fill">
+                <div class="col-6 border-light border-right border-bottom">
+                    <h3>KONIEC ZMIANY</h3>
+                </div>
+                <div class="col-6 border-bottom border-light">
+                    <h3>ZGŁOŚ WADĘ</h3>
+                </div>
+            </div>
+            <div class="row flex-fill">
+                <div class="col-6 border-right">
+                    <h3>PRZERWA</h3>
+                </div>
+                <div class="col-6">
+                    <h3>PRZESTÓJ</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-100">
+        <div class="row flex-fill">
+            <div class="col-2 d-flex flex-column darkBlue">
+                <img class="mx-auto d-block img-fluid" src="assets/img/123.png" alt="">
+                <p class="text-center">64%</p>
+                <div class="row flex-fill">
+                    <ul class="list-group list-group-flush transparentBg dataList">
+                        <li class="list-group-item">
+                            <h5>Czas:</h5>
+                            <p>55 min</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5>Odchylenie od standardu:</h5>
+                            <p>123 PLN</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5>Ostatnie zlecenie:</h5>
+                            <p>99%</p>
+                        <li class="list-group-item">
+                            <h5>Liczba sztuk (Ostatnia h):</h5>
+                            <p>55%</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5>Średnio na godzinę:</h5>
+                            <p>55</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-10">
 
-<div class="col">
-    <button type="button" class="btn defaultBtn colorPurple w-100 h-100">MO</button>
-<router-outlet></router-outlet>    
-  </div>
+            </div>
+        </div>
+    </div>
+</div>

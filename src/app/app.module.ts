@@ -13,11 +13,12 @@ import { BtnGroup } from './btn-group';
 import { NameSidebar } from './name-sidebar';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, LoginButton, BtnGroup, MainpageComponent
+    AppComponent, LoginButton, BtnGroup, MainpageComponent, LoginpageComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +53,6 @@ import { AppRoutingModule } from './app-routing.module';
     FormlyBootstrapModule,
     AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

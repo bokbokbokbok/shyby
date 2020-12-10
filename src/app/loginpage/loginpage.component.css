@@ -1,0 +1,105 @@
+* {
+    font-family: 'Selawik';
+    font-size: 32px;
+    overflow: hidden;
+   }
+.loginBar {
+    width:50%;
+    height: 100%;
+    margin-right: 7%;
+    background-color: #454954;
+}
+.loginBar * {
+    padding: 3%;
+}
+.loginForm {
+    padding: 7%;
+    height: 100vh;
+    max-width: 100%;
+    background-color: #cfdae2;
+}
+.dropdownUsers {
+    width:43%;
+    height:100%;
+    background-color: #454954;
+    padding: 5%;
+    overflow-y: hidden;
+}
+.dropdownUsersItems{
+    padding: 10px;
+    color:white;
+    background: transparent;
+    cursor: pointer;
+}
+.dropdownUsersItems:focus{
+    color:cadetblue;
+}
+
+.barContainer {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-bottom: 34%;
+    margin-right: 7%;
+}
+.loginButton {
+    height: 100%;
+    padding-top:5%;
+    width: 100%;
+}
+.buttonContainerLeft * {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+    height:100%;
+    width: 100%;
+  }
+.buttonContainerLeft * :hover {
+    background-color: #36302f;
+}
+.defaultBtn {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+  }
+.defaultBtn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.colorPurple {
+    background-color: #642575;
+    color:white;
+}
+.colorBrown {
+    background-color: #36302f;
+    color:white;
+} 
+.colorBlue{
+    background-color: #2ecfff;
+    color:white;
+}
+
+.buttonContainerRight * {
+    background-color: #36302f;
+}
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+    height:100%;
+  }
+  .dropdownNumbers {
+    width:43%;
+    height:100%;
+    background-color: #454954;
+}

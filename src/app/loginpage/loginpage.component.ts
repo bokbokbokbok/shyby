@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-loginpage',
+  templateUrl: './loginpage.component.html',
+  styleUrls: ['./loginpage.component.css']
 })
-export class AppComponent {
-  [x: string]: any;
+export class LoginpageComponent implements OnInit {
+  ngOnInit(): void {
+  }
+
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
@@ -90,5 +92,6 @@ export class AppComponent {
   }
   
   submit() {
+    alert(JSON.stringify(this.model));
   }
 }

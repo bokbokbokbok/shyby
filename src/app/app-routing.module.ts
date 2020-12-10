@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import {Routes, RouterModule} from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { AppComponent } from './app.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 const appRoutes: Routes =[
-  { path: '', component: AppComponent},
+  { path: '', component: LoginpageComponent},
   { path: 'main', component: MainpageComponent},
+  { path: '**', component: LoginpageComponent}
 ];
 
 @NgModule({

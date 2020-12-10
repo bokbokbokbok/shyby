@@ -1,0 +1,68 @@
+<div class="loginForm form-inline">
+    <div class="loginBar bg-dark">
+      <div class="row h-75">
+        <div class="col-4 d-flex flex-column">
+          <div class="col">
+            <button type="button" class="btn defaultBtn colorBrown w-100 h-100">Stolik</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn defaultBtn colorBrown w-100 h-100">Tryb</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn defaultBtn colorBrown w-100 h-100">Pracownik</button>
+          </div>
+        </div>
+        <div class="col d-flex flex-column">
+          <div class="row flex-fill">
+            <button type="button" (click)="toggledropdownNumbers()" class="btn btn-light w-100">{{calculator.displayValue}}</button>
+          </div>
+          <div class="row flex-fill">
+            <div class="col">
+              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">OW</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">PR</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">MO</button>
+            </div>
+          </div>
+          <div class="row flex-fill">
+            <button type="button" (click)="toggledropdownUsers()" class="btn btn-light w-100">Wybierz pracownika</button>
+          </div>
+        </div>
+      </div>
+      <div class="row h-25">
+        <div class="col">
+          <button type="submit"  routerLink="/main" class="defaultBtn colorBlue loginButton" [disabled]="!form.valid">Zaloguj</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="dropdownUsers" class="dropdownUsers">
+      <div *ngFor="let user of users">
+        <button type="button" class="btn shadow-none dropdownUsersItems">{{user}}</button>
+        </div>
+    </div>
+    <div *ngIf="dropdownNumbers" class="dropdownNumbers">
+      <div class="calculator-keys">
+        <button type="button" value="7" (click)="inputDigit(7)" class="btn btn-light waves-effect">7</button>
+        <button type="button" value="8" (click)="inputDigit(8)" class="btn btn-light waves-effect">8</button>
+        <button type="button" value="9" (click)="inputDigit(9)" class="btn btn-light waves-effect">9</button>
+  
+  
+        <button type="button" value="4" (click)="inputDigit(4)" class="btn btn-light waves-effect">4</button>
+        <button type="button" value="5" (click)="inputDigit(5)" class="btn btn-light waves-effect">5</button>
+        <button type="button" value="6" (click)="inputDigit(6)" class="btn btn-light waves-effect">6</button>
+  
+  
+        <button type="button" value="1" (click)="inputDigit(1)" class="btn btn-light waves-effect">1</button>
+        <button type="button" value="2" (click)="inputDigit(2)" class="btn btn-light waves-effect">2</button>
+        <button type="button" value="3" (click)="inputDigit(3)" class="btn btn-light waves-effect">3</button>
+  
+        <button type="button" class="decimal function btn btn-secondary" value=".">.</button>
+        <button type="button" value="0" (click)="inputDigit(0)" class="btn btn-light waves-effect">0</button>
+        <button type="button" class="all-clear function btn btn-danger btn-sm" (click)="resetCalculator()"  value="all-clear">AC</button>
+        </div>
+    </div>
+
+  </div>

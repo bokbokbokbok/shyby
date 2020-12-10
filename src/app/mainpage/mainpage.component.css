@@ -1,0 +1,40 @@
+.mainpageForm {
+    height: 100vh;
+    max-width: 100%;
+    background-color: black;
+    overflow-y: scroll;
+}
+* {
+    color:white;
+   }
+   .trybButton {
+       color:#502263;
+       background-color: #502263;
+       transition: 0.3s;
+       border-radius:20px;
+       width: 100%;
+       height: 100%;
+   }
+   .trybButton:hover{
+       opacity: 0.8;
+   }
+   dataList {
+       overflow-y: scroll;
+       flex-grow : 1;
+   } 
+   dataList::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+    }
+    .scrollBar {
+        overflow: scroll;
+    }
+   .transparentBg * {
+     background-color: transparent;
+   }
+   .darkBlue {
+    background-color:#111624;
+   }
+   h5 {
+       color:#2ecfff;
+   }
