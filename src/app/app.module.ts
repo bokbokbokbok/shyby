@@ -14,11 +14,12 @@ import { NameSidebar } from './name-sidebar';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { BtnGridComponent } from './btn-grid/btn-grid.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, LoginButton, BtnGroup, MainpageComponent, LoginpageComponent
+    AppComponent, LoginButton, BtnGroup, MainpageComponent, LoginpageComponent, BtnGridComponent
   ],
   imports: [
     BrowserModule,

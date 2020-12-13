@@ -1,0 +1,37 @@
+* {
+    color:black;
+   }
+
+.bg-blue, .bg-violet, .bg-darkblue, .bg-white {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-blue {
+    background-color: #3ccffc;
+}
+.borderless td, .borderless th {
+    border: none;
+}
+.tableRow > div {
+    padding: 1%;
+}
+.bg-violet {
+    background-color: #4f2562;
+}
+.bg-violet > p {
+    color: white
+}
+.bg-darkblue {
+    background-color: #101723;
+}
+.bg-white {
+    background-color: white;
+}
+.redText {
+    color:red;
+}
+.greenText {
+    color:green;
+}
