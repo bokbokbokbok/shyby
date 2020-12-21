@@ -18,29 +18,38 @@
           </div>
           <div class="row flex-fill">
             <div class="col">
-              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">OW</button>
+              <button type="button" class="btn defaultBtn w-100 h-100" 
+              (click)="setType(1)"
+               [ngClass]="sessionType == 1 ? 'btn-light' : 'colorPurple'">
+                OW</button>
             </div>
             <div class="col">
-              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">PR</button>
+              <button type="button" class="btn defaultBtn w-100 h-100" 
+              (click)="setType(2)"
+               [ngClass]="sessionType == 2 ? 'btn-light' : 'colorPurple'">
+                PR</button>
             </div>
             <div class="col">
-              <button type="button" class="btn defaultBtn colorPurple w-100 h-100">MO</button>
+              <button type="button" class="btn defaultBtn w-100 h-100" 
+              (click)="setType(3)"
+               [ngClass]="sessionType == 3 ? 'btn-light' : 'colorPurple'">
+               MO</button>
             </div>
           </div>
           <div class="row flex-fill">
-            <button type="button" (click)="toggledropdownUsers()" class="btn btn-light w-100">Wybierz pracownika</button>
+            <button type="button" (click)="toggledropdownUsers()" class="btn btn-light w-100">{{sessionUser == undefined ? "Wybierz pracownika" : sessionUser.name}}</button>
           </div>
         </div>
       </div>
       <div class="row h-25">
         <div class="col">
-          <button type="submit"  routerLink="/main" class="defaultBtn colorBlue loginButton" [disabled]="!form.valid">Zaloguj</button>
+          <button type="submit"  routerLink="/main" class="defaultBtn colorBlue loginButton">Zaloguj</button>
         </div>
       </div>
     </div>
     <div *ngIf="dropdownUsers" class="dropdownUsers">
       <div *ngFor="let user of users">
-        <button type="button" class="btn shadow-none dropdownUsersItems">{{user}}</button>
+        <button type="button" class="btn shadow-none dropdownUsersItems" (click)="setUser(user)">{{user.name}}</button>
         </div>
     </div>
     <div *ngIf="dropdownNumbers" class="dropdownNumbers">

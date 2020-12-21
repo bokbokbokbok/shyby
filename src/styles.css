@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .mainpageForm {
-    height: 100vh;
+    height: calc(100vh - 16px);
     max-width: 100%;
     background-color: black;
     overflow-y: scroll;

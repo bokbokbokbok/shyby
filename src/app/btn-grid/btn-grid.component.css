@@ -1,7 +1,15 @@
 * {
     color:black;
+    font-weight: bold;
+    font-size: calc(1.5vw + 1vh);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
    }
-
+   .mainpageForm {
+       padding:1%;
+   }
+   .hugeFont * {
+    font-size: calc((1.5vw + 1vh) * 1.5);
+   }
 .bg-blue, .bg-violet, .bg-darkblue, .bg-white {
     height: 100%;
     display: flex;
@@ -15,7 +23,7 @@
     border: none;
 }
 .tableRow > div {
-    padding: 1%;
+    padding: 0.5%;
 }
 .bg-violet {
     background-color: #4f2562;
