@@ -30,51 +30,67 @@
     <div *ngFor="let item of items" class="row tableRow flex-fill hugeFont">
             <div class="col-2">
                 <div class="bg-violet">
-                    <p>{{item.type}}</p>
+                    <p>{{item.code}}</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="bg-blue">
-                    <p>{{item.section}}</p>
+                    <p>{{item.activeTables + "/" + item.allTables}}</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="bg-white">
-                    <p>{{item.zmiana}}</p>
+                    <p>{{item.lastShiftPerformance}}</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="bg-white">
-                    <p>{{item.ostatnia}}</p>
+                    <p>{{item.lastHourPerformance}}</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="bg-darkblue">
-                    <p class={{bColor(item.balance)}}>{{addSign(item.balance)}}</p>
+                    <p class={{bColor(item.minuteBalance)}}>{{addSign(item.minuteBalance)}}</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="bg-darkblue">
-                    <p class={{wColor(item.wyjdanisc)}}>{{item.wyjdanisc + "%"}}</p>
+                    <p class={{wColor(item.averagePerformance)}}>{{item.averagePerformance + "%"}}</p>
                 </div>
             </div>
     </div>
     <br>
-    <div *ngFor="let BtmItem of BtmItems" class="row tableRow flex-fill">
-            <div class="col-2">
+    <!-- <div *ngFor="let BtmItem of BtmItems" class="row tableRow flex-fill"> -->
+    <div class="row tableRow flex-fill">
+        <div class="col-2">
+        </div>
+        <div class="col-4">
+            <div class="bg-violet">
+                <p>WYKONANIE (szt)</p>
             </div>
-            <div class="col-4">
-                <div class="bg-violet">
-                    <p>{{BtmItem.type}}</p>
-                </div>
+        </div>
+        <div class="col-2 hugeFont">
+            <div class="bg-white">
+                <p>{{btw.completed}}</p>
             </div>
-            <div class="col-2 hugeFont">
-                <div class="bg-white">
-                    <p>{{BtmItem.value}}</p>
-                </div>
-            </div>
-            <div class="col-4">
-            </div>
+        </div>
+        <div class="col-4">
+        </div>
     </div>
+    <div class="row tableRow flex-fill">
+        <div class="col-2">
+        </div>
+        <div class="col-4">
+            <div class="bg-violet">
+                <p>PLAN (szt)</p>
+            </div>
+        </div>
+        <div class="col-2 hugeFont">
+            <div class="bg-white">
+                <p>{{btw.plan}}</p>
+            </div>
+        </div>
+        <div class="col-4">
+        </div>
     </div>
 </div>

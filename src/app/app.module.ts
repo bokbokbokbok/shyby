@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -16,13 +17,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { BtnGridComponent } from './btn-grid/btn-grid.component';
 
-
 @NgModule({
   declarations: [
     AppComponent, LoginButton, BtnGroup, MainpageComponent, LoginpageComponent, BtnGridComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormlyModule.forRoot(
       {
